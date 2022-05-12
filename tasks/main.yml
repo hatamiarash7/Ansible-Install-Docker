@@ -1,4 +1,17 @@
 ---
+- name: Install prerequisite packages
+  become: true
+  ansible.builtin.apt:
+    name: "{{ packages }}"
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+  vars:
+    packages:
+      - apt-transport-https
+      - gpg
+      - gpg-agent
+
 - name: Add Docker GPG apt key
   become: true
   ansible.builtin.apt_key:
