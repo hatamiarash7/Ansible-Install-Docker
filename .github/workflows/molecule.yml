@@ -11,25 +11,20 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        scenario:
+          - ubuntu-20.04
+
     steps:
-      - name: Cancel previous workflow
-        uses: styfle/cancel-workflow-action@0.9.1
+      - uses: actions/checkout@v3
+
+      - name: Molecule
+        uses: gofrolist/molecule-action@v2
         with:
-          access_token: ${{ github.token }}
-
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: "3.8"
-
-      - name: Install dependencies
-        run: pip3 install yamllint ansible-lint ansible "molecule[lint,docker]"
-
-      - name: Install Galaxy dependencies
-        run: ansible-galaxy collection install community.docker
-
-      - name: Run molecule
-        run: molecule test
+          molecule_options: --debug --base-config molecule/_shared/base.yml
+          molecule_command: test
+          molecule_args: --scenario-name ${{ matrix.scenario }}
+        env:
+          ANSIBLE_FORCE_COLOR: "1"
