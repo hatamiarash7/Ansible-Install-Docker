@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include hatamiarash7.install_docker"
+      include_role:
+        name: "hatamiarash7.install_docker"

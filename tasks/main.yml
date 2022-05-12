@@ -25,12 +25,14 @@
   ansible.builtin.file:
     path: /etc/docker
     state: directory
+    mode: "0755"
 
 - name: Make docker use systemd to manage cgroups
   become: true
   ansible.builtin.copy:
     src: files/daemon.json
     dest: /etc/docker/daemon.json
+    mode: "0755"
 
 - name: Update apt and Install docker-ce
   become: true
