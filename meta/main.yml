@@ -1,5 +1,6 @@
 galaxy_info:
   author: Arash Hatami
+  namespace: hatamiarash7
   description: Install Docker CE
   issue_tracker_url: https://github.com/hatamiarash7/Ansible-Install-Docker/issues
   license: license (GPL-3.0-only)
