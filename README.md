@@ -7,7 +7,7 @@ You can use this role to install Docker.
 -   Clone this role:
 
     ```bash
-    git clone repo install_docker
+    git clone git@github.com:hatamiarash7/Ansible-Install-Docker.git install_docker
     ```
 
 -   Include role in Playbook:
