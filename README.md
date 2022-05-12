@@ -1,5 +1,7 @@
 # Install Docker ( Ansible )
 
+[![Build Status](https://app.travis-ci.com/hatamiarash7/Ansible-Install-Docker.svg?branch=master)](https://app.travis-ci.com/hatamiarash7/Ansible-Install-Docker)
+
 You can use this role to install Docker.
 
 ## How-to
