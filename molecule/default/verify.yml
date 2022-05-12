@@ -4,7 +4,6 @@
   gather_facts: false
   become: true
   tasks:
-    - name: Initialize role without actually running it
+    - name: Include install_docker
       include_role:
         name: install_docker
-        tasks_from: init
