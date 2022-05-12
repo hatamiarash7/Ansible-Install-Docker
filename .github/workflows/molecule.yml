@@ -23,10 +23,7 @@ jobs:
           path: "${{ github.repository }}"
 
       - name: Molecule
-        uses: gofrolist/molecule-action@v2
+        uses: monolithprojects/action-molecule@v1.4.1
         with:
-          molecule_options: --debug --base-config molecule/_shared/base.yml
           molecule_command: test
-          molecule_args: --scenario-name ${{ matrix.scenario }}
-        env:
-          ANSIBLE_FORCE_COLOR: "1"
+          scenario: ${{ matrix.scenario }}
