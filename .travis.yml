@@ -14,7 +14,7 @@ addons:
       - python-pip
 
 install:
-  - pip install ansible molecule[docker,lint]
+  - pip install ansible ansible-lint molecule[docker,lint]
 
 script:
   - molecule test
