@@ -25,10 +25,10 @@ jobs:
         with:
           python-version: "3.8"
 
-      - name: Install dependencies.
+      - name: Install dependencies
         run: pip3 install yamllint ansible-lint ansible "molecule[lint,docker]"
 
-      - name: Install Galaxy dependencies.
+      - name: Install Galaxy dependencies
         run: ansible-galaxy collection install community.docker
 
       - name: Run molecule
