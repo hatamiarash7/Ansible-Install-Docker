@@ -11,10 +11,9 @@ platforms:
       - /tmp
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    privileged: true
     capabilities:
       - SYS_ADMIN
-    command: "/sbin/init"
+    command: "/lib/systemd/systemd"
     pre_build_image: true
 provisioner:
   name: ansible
