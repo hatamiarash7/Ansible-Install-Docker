@@ -6,5 +6,5 @@
   tasks:
     - name: Initialize role without actually running it
       include_role:
-        name: my_role
+        name: install_docker
         tasks_from: init
