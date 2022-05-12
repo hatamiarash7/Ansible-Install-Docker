@@ -21,6 +21,5 @@ verifier:
   name: ansible
 lint: |
   set -e
-  PATH=${PATH}
   yamllint .
   ansible-lint .
