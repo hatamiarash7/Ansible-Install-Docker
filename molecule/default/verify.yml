@@ -1,10 +1,10 @@
 ---
-# This is an example playbook to execute Ansible tests.
-
 - name: Verify
   hosts: all
   gather_facts: false
+  become: true
   tasks:
-    - name: Example assertion
-      assert:
-        that: true
+    - name: Initialize role without actually running it
+      include_role:
+        name: my_role
+        tasks_from: init
