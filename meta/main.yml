@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: install_docker
   author: Arash Hatami
   namespace: hatamiarash7
   description: Install Docker CE
