@@ -1,9 +1,0 @@
----
-- name: Verify
-  hosts: all
-  gather_facts: false
-  become: true
-  tasks:
-    - name: Include install_docker
-      include_role:
-        name: install_docker
