@@ -71,6 +71,12 @@
     append: true
   when: (ansible_user is defined) and (ansible_user|length > 0)
 
+- name: Start and Enable Docker
+  ansible.builtin.service:
+    name: docker
+    state: started
+    enabled: yes
+
 - name: Apply chmod on docker.sock
   become: true
   ansible.builtin.file:
