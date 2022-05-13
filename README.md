@@ -6,19 +6,27 @@ You can use this role to install [Docker CE](https://docs.docker.com/engine/inst
 
 ## How-to
 
+First you need instal the role:
+
 -   Clone this role:
 
     ```bash
     git clone git@github.com:hatamiarash7/Ansible-Install-Docker.git install_docker
     ```
 
--   Include role in Playbook:
+-   Or you can install using galaxy:
 
-    ```yml
-    - hosts: servers
-        roles:
-            - install_docker
+    ```bash
+    ansible-galaxy install hatamiarash7.install_docker
     ```
+
+Then, Include role in Playbook:
+
+```yml
+- hosts: servers
+    roles:
+        - hatamiarash7.install_docker
+```
 
 ---
 
