@@ -23,7 +23,7 @@ First you need instal the role:
 Then, Include role in Playbook:
 
 ```yml
-- hosts: servers
+- hosts: all
     roles:
         - hatamiarash7.install_docker
 ```
