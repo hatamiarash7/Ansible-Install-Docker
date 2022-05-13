@@ -33,4 +33,4 @@ jobs:
           python3 -m pip install ansible ansible-lint molecule[docker,lint]
 
       - name: Test
-        run: molecule test
+        run: molecule --debug test
