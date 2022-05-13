@@ -1,6 +1,6 @@
 # Install Docker ( Ansible )
 
-[![Build Status](https://app.travis-ci.com/hatamiarash7/Ansible-Install-Docker.svg?branch=master)](https://app.travis-ci.com/hatamiarash7/Ansible-Install-Docker)
+[![Build Status](https://app.travis-ci.com/hatamiarash7/Ansible-Install-Docker.svg?branch=master)](https://app.travis-ci.com/hatamiarash7/Ansible-Install-Docker) [![Molecule](https://github.com/hatamiarash7/Ansible-Install-Docker/actions/workflows/molecule.yml/badge.svg)](https://github.com/hatamiarash7/Ansible-Install-Docker/actions/workflows/molecule.yml)
 
 You can use this role to install [Docker CE](https://docs.docker.com/engine/install/ubuntu/).
 
